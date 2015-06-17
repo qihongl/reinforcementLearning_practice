@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Chapter 4 in Reinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto.</title>
+    <META name="description" content="A solution manual for the problems from the textbook: Reinforcement Learning: An Introduction by Richard S. Sutton and Andrew G. Barto">
+    <META name="keywords" content="solution, solutions, exercise, exercises, problem, problems, manual, reinforcement, learning, introduction, sutton, barto">
+  </head>
+  <!-- solution solutions exercise exercises problem problems manual reinforcement learning introduction sutton barto -->
+
+  <body>
+
+  We begin with the common state value function.
+      
+  <CENTER>
+  <IMG src="Images/Gam/common_state_value_fn.gif" alt="">
+  </CENTER><BR>
+
+  Now the optimal policy one obtains depends some very low level details.  See the
+  discussion <a href="http://www.cs.ualberta.ca/~sutton/book/gamblers.html">here</a>
+  Here we will show a variety of the optimal policies we can obtain using the earlier code.
+  If we follow the algorithm where we loop from the first action "1" to the last action and
+  change our policy as we go <EM>only</EM> if the next policy is better than the previous by
+  more than 10^(-8) we can obtain the result found in the book.
+      
+  <CENTER>
+  <IMG src="Images/Gam/gam_books_policy.gif" alt="">
+  </CENTER><BR>
+
+  If we decrese this threshold so that we take any policy that is greater
+  than the previous by any amount we obtain.
+
+  <CENTER>
+  <IMG src="Images/Gam/eg_policy_1.gif" alt="">
+  </CENTER><BR>
+
+  If we reverse the order of the actions when we consider them one at a time and
+  still take the next policy even if it is only <EM>numerically</EM> greater
+  than previous ones (i.e. eps_pol=0) we obtain
+      
+  <CENTER>
+  <IMG src="Images/Gam/eg_policy_2.gif" alt="">
+  </CENTER><BR>
+
+  If we reverse the order of the policies but now only take policies that are
+  greater by a threshold amount 10^(-8) we obtain a trivial policy
+
+  <CENTER>
+  <IMG src="Images/Gam/eg_policy_3.gif" alt="">
+  </CENTER><BR>
+
+  Various experiments can be performed in this way.  If we take a different
+  number of non-terminal states say an odd number say 1021 we find much more
+  regular patterns.  In that case we have 
+
+  <CENTER>
+  <IMG src="Images/Gam/eg_policy_4.gif" alt="">
+  </CENTER><BR>
+
+  When the number of non-terminal states is 1022 we find our optimal policy given by.  
+
+  <CENTER>
+  <IMG src="Images/Gam/eg_policy_5.gif" alt="">
+  </CENTER><BR>
+
+  <hr>
+  <address><a href="mailto:wax@alum.mit.edu">John Weatherwax</a></address>
+<!-- Created: Sat Apr  2 11:09:15 EST 2005 -->
+<!-- hhmts start -->
+Last modified: Sun May 15 08:46:34 EDT 2005
+<!-- hhmts end -->
+  </body>
+</html>
