@@ -1,3 +1,5 @@
+% reinforcement learning: 1-D walker on int [-5,5]
+% written by Professor Jay McClelland
 function [rundata] = explore( )
 %UNTITLED5 Summary of this function goes here
 %   Detailed explanation goes here

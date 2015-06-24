@@ -1,3 +1,4 @@
+% written by Professor Jay McClelland
 function [ ] = Act( )
 % here we act according to the action selected
 % by selectAction

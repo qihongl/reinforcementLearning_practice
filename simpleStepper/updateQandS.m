@@ -1,3 +1,4 @@
+% written by Professor Jay McClelland
 function [] = updateQandS()
 global w a p
 

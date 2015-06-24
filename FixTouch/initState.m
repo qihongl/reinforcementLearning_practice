@@ -1,3 +1,4 @@
+% written by Professor Jay McClelland
 function [ ] = initState( )
 
 global a w d h p;

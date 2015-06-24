@@ -1,3 +1,4 @@
+% written by Professor Jay McClelland
 function [] = initParamsEtc( )
 %
 global p d a

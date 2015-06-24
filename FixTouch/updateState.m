@@ -1,3 +1,4 @@
+% written by Professor Jay McClelland
 function [ ] = updateState()
 %this function uses the real state to update the internal state
 %after Act is called to execute the hand or eye movement action

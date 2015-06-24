@@ -1,3 +1,4 @@
+% written by Professor Jay McClelland
 function [ ] = updateWeights( )
 
 global a w p;

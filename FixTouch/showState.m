@@ -1,3 +1,4 @@
+% written by Professor Jay McClelland
 function [ ] = showState( )
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here

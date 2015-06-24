@@ -1,3 +1,4 @@
+% written by Professor Jay McClelland
 function [] = getNextState( )
 %UNTITLED3 Summary of this function goes here
 %   Detailed explanation goes here
