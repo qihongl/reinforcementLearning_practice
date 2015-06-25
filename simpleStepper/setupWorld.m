@@ -14,7 +14,7 @@ p.gamma = .5;
 p.alpha = .1;
 p.qscale = 3;
 p.nactions = 2;
-p.trials = 10000;
+p.trials = 1000;
 
 a.q = .01 + zeros(2*p.range+1,p.nactions);
 end
