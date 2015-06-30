@@ -5,9 +5,11 @@ function [ results ] = runAgent( )
 
 global a w h p d;
 
+initParamsEtc( );
 initState();
 updateState();
 showState();
+
 i = 0;
 while w.rS.handPos ~= w.rS.targPos && i < 50
     selectAction();
