@@ -9,12 +9,11 @@ w.cura = sample(prob);
 end
 
 % softmax transformation
-% expects the input x to be a vector a Q-values
+% expects the input x t
 function [distribution] = softmax(x, scale)
 distribution = (x.^scale) / sum(x.^scale);
 end
 
-% choose action based on the probability distribution
 function [c] = sample(pr)
 rv = rand(1);
 cp = cumsum(pr);

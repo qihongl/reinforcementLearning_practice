@@ -2,12 +2,11 @@
 % written by Professor Jay McClelland
 function [rundata] = explore(seed)
 if nargin == 0
-    seed = randi([0 10],1);
+    seed = randi([0 99],1);
 end
 % initialization
 rng(seed);
-%UNTITLED5 Summary of this function goes here
-%   Detailed explanation goes here
+
 global w a p h;
 % w-world; a-agent; p-parameters; h-history
 
