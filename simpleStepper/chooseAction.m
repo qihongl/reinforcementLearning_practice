@@ -7,7 +7,7 @@ global w a p;
 
 denom = sum(a.q(w.curs+p.range+1,:).^p.qscale);
 prob = (a.q(w.curs+p.range+1,:).^p.qscale)/denom;
-w.cura = sample(prob)
+w.cura = sample(prob);
 end
 
 function [c] = sample(pr)

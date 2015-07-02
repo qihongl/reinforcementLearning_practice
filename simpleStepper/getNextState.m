@@ -12,7 +12,8 @@ end
 if w.nexts == 5
     w.R = 1;
 else
-    w.R = 0;
+    w.R = -0.005;
+%     w.R = 0;
 end
 end
 
