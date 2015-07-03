@@ -1,14 +1,36 @@
 %% larger simulations
-clear; clc % clear things up
+% clear; clc;
 
-%
+% parameters
 nSubj = 10;
-temp = zeros(100,1);
+ntrials = 100;
+doPlotting = false;
+
+% simulate
+temp = zeros(ntrials,1);
+rundata = cell(10,1);
 for i = 1 : nSubj
-    run = explore(i);
-    temp = temp + run.h.stepsToReward;
+    fprintf('%.2d: ',i);
+    rundata{i} = explore(i);
+    temp = temp + rundata{i}.h.stepsToReward;
 end
 
-%% 
+
+%% plot the performance against training epochs
 plot(temp/nSubj)
-title('mean across 10 models, small punishment = 0', 'fontsize',14)
+
+if doPlotting
+    
+    fontsize = 14;
+    plot(temp/nSubj)
+    hold on
+    plot(temp1/nSubj)
+    
+    hold off
+    leg = legend('small punishment = 0','small punishment = -0.05',...
+        'Location','northeast');
+    set(leg,'FontSize',fontsize);
+    title('Average across 20 models', 'fontsize',fontsize)
+    xlabel('number of trials', 'fontsize',fontsize)
+    ylabel('steps used', 'fontsize',fontsize)
+end

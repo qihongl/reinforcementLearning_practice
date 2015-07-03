@@ -27,7 +27,7 @@ for i = 1:p.trials
     h.stepsToReward(i) = w.steps;
     %qhist(i,:,:) = a.q;
 end
-textprogressbar('Done training: ');
+textprogressbar('Done!');
 
 rundata = struct('h',h,'a',a,'p',p);
 plot(rundata.h.stepsToReward);
